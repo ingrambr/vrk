@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: vrk
+Version: 0.1.0
+Summary: Variable Rank Kriging — sparse GP with EP for geostatistics
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: numpy>=1.23
+Requires-Dist: scipy>=1.9
+Provides-Extra: dev
+Requires-Dist: pytest>=7; extra == "dev"
+Dynamic: license-file
