@@ -1,0 +1,27 @@
+{
+  "tile": "727000_4706000",
+  "crs": "EPSG:32618",
+  "step_m": 10,
+  "seed": 42,
+  "elev_mean_m": 215.036,
+  "sigma_rtk_m": 0.05,
+  "sigma_a_m": 0.5,
+  "n_rtk": 15,
+  "n_gps": 50,
+  "n_lidar": 200,
+  "rtk_file": "rtk_observations.csv",
+  "gps_file": "gps_observations.csv",
+  "lidar_file": "lidar_observations.csv",
+  "bounds_utm": {
+    "left": 727000,
+    "bottom": 4706000,
+    "right": 728000,
+    "top": 4707000
+  },
+  "bounds_wgs84": {
+    "lon_min": -72.23858,
+    "lon_max": -72.22616,
+    "lat_min": 42.4728,
+    "lat_max": 42.48199
+  }
+}

@@ -1,5 +1,7 @@
-# vrk
-Variable Rank Kriging
+# vrk — Variable Rank Kriging
+
+Sparse Gaussian Process Kriging with Expectation Propagation,
+using geostatistics covariance conventions.
 
 ## Installation
 
@@ -30,4 +32,3 @@ cov_sph = SphericalCovariance(sill=1.0, range_a=2.0)
 model2 = VRK(cov_sph, lik, max_active=20, n_sweeps=3)
 model2.fit(X, y)
 ```
-
