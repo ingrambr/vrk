@@ -42,9 +42,6 @@ data/neon_harv/NEON_D01_HARV_DP3_727000_4706000_DTM.tif
 
 ## Fixed observation files (included)
 
-The four files in `data/neon_harv/` are the fixed observation draws used
-throughout the paper (seed 42, N_RTK=15, N_A=50, N_B=200):
-
 | File | Contents |
 |---|---|
 | `rtk_observations.csv` | 15 RTK-GPS reference points |
@@ -58,22 +55,17 @@ throughout the paper (seed 42, N_RTK=15, N_A=50, N_B=200):
 
 Run in order:
 
-### 1. `create_observation_files.py`
-Regenerates the fixed observation CSVs from the NEON rasters. The files in
-`data/neon_harv/` are already the output of this script (seed 42); re-running
-is only needed if you modify the sampling parameters.
-
-### 2. `neon_experiment.py`
+### 1. `neon_experiment.py`
 Single-seed NEON pipeline (seed 42). Produces calibration diagnostics and
 the figures used in Section 7 of the paper.
 
-### 3. `neon_multiseed.py`
+### 2. `neon_multiseed.py`
 Multi-seed sensitivity analysis (10 seeds). Resamples observation locations
 10 times and reports mean ± std for all methods across vegetated and full-grid
 zones. Output saved to `data/neon_harv/neon_multiseed_results.json`.
 This script produces the Table 6 numbers reported in the paper.
 
-### 4. `hyperparameter_experiment.py`
+### 3. `hyperparameter_experiment.py`
 Supplementary hyperparameter estimation experiment (Section 10.5 and Response
 to Reviewer 1, Comment 2). Runs EP marginal-likelihood optimisation starting
 from a misspecified covariance on the 1-D synthetic field.
